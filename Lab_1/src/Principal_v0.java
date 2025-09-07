@@ -1,12 +1,10 @@
 /**
  * Lab0: Leitura de Base de Dados N�o-Distribuida
  * 
- * Autor: Lucio A. Rocha
- * Ultima atualizacao: 20/02/2023
+ *Nome : Julio Cesar Farias
+ *Nome : Lucas Santos Souza
  * 
- * Referencias: 
- * https://docs.oracle.com/javase/tutorial/essential/io
- * 
+ *
  */
 
 import java.io.*;
@@ -173,3 +171,4 @@ public class Principal_v0 {
 	}
 
 }
+
