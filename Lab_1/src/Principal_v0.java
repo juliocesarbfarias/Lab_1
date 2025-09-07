@@ -97,14 +97,13 @@ public class Principal_v0 {
 			        return;
 			    }
 			    
-			    // Cria um gerador de numeros aleatorios seguro.
+			    
 			    SecureRandom random = new SecureRandom();
 			    
-			    // Sorteia um numero entre 0 (inclusivo) e o numero total de fortunas (exclusivo).
-			    // O NUM_FORTUNES foi calculado no inicio do programa.
+			    
 			    int sortedIndex = random.nextInt(NUM_FORTUNES);
 
-			    // Busca a fortuna no HashMap usando o indice sorteado como chave.
+			   
 			    String fortune = hm.get(sortedIndex);
 			    
 			    System.out.println("Fortuna Sorteada (No. " + sortedIndex + "):");
@@ -121,7 +120,7 @@ public class Principal_v0 {
 		    StringBuilder novaFortuna = new StringBuilder();
 		    String linha;
 
-		    // Le a entrada do usuario linha por linha ate ele pressionar Enter em uma linha vazia.
+		    
 		    while (scanner.hasNextLine()) {
 		        linha = scanner.nextLine();
 		        if (linha.isEmpty()) {
@@ -130,15 +129,14 @@ public class Principal_v0 {
 		        novaFortuna.append(linha).append("\n");
 		    }
 
-		    // O bloco try-with-resources garante que o FileWriter sera fechado automaticamente.
-		    // O 'true' no construtor do FileWriter indica que o arquivo sera aberto em modo de acrescimo (append).
+		   
 		    try (FileWriter fw = new FileWriter(path.toString(), true);
 		         BufferedWriter bw = new BufferedWriter(fw);
 		         PrintWriter out = new PrintWriter(bw)) {
 
-		        // Adiciona o separador '%' antes da nova fortuna para separar da anterior.
+		       
 		        out.println("%");
-		        // Escreve a nova fortuna no arquivo.
+		        
 		        out.print(novaFortuna.toString());
 		        
 		        System.out.println("Nova fortuna adicionada com sucesso!");
@@ -146,7 +144,7 @@ public class Principal_v0 {
 		    } catch (IOException e) {
 		        System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
 		    } finally {
-		        scanner.close(); // Fecha o scanner para liberar recursos.
+		        scanner.close(); 
 		    }
 		}
 	}
@@ -171,4 +169,5 @@ public class Principal_v0 {
 	}
 
 }
+
 
